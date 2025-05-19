@@ -61,7 +61,7 @@ El sistema utiliza:
 
 ## 🖥️ ¿Cómo iniciar el programa?
 
-Desde tu entorno con Python instalado, simplemente ejecuta:
+Desde un entorno con Python instalado, ejecutar:
 
 ```bash
 python launcher.py
