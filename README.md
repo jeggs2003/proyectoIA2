@@ -59,29 +59,6 @@ El sistema utiliza:
 
 ---
 
-## 🛠️ Estructura del proyecto
-
-proyectoGestosIA/
-│
-├── launcher.py # Interfaz gráfica principal
-├── main.py # Lógica del asistente por gestos
-├── trainer.py # Entrenamiento del modelo
-│
-├── model/
-│ └── model.pkl # Modelo entrenado
-│
-├── gesture/
-│ └── dataset/ # Datos de entrenamiento (.csv)
-│ └── hand_detector.py
-│ └── gesture_classifier.py
-│
-├── camara/
-│ └── camera_handler.py
-│
-├── actions/
-│ └── system_controller.py
-│ └── gesture_mapper.py
-
 ## 🖥️ ¿Cómo iniciar el programa?
 
 Desde tu entorno con Python instalado, simplemente ejecuta:
