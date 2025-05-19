@@ -13,11 +13,11 @@ class SystemController:
 
     def next_track(self):
         threading.Thread(target=lambda: keyboard.send("next track")).start()
-        print("⏭️ Siguiente canción")
+        print("⏭️ Siguiente cancion")
 
     def previous_track(self):
         threading.Thread(target=lambda: keyboard.send("previous track")).start()
-        print("⏮️ Canción anterior")
+        print("⏮️ Cancion anterior")
 
     def volume_up(self):
         threading.Thread(target=lambda: keyboard.send("volume_up")).start()

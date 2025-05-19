@@ -11,19 +11,17 @@ class GestureClassifier:
 
     def classify(self, landmarks):
         if not landmarks or len(landmarks) != 21:
-            return None
+            return None, 0.0  # devuelve gesto None y 0% confianza
 
         features = []
         for lm in landmarks:
             features.extend([lm[0], lm[1]])
 
-        # Obtener probabilidades de predicción
         proba = self.model.predict_proba([features])[0]
-        max_prob = np.max(proba)
-        pred_class = self.classes[np.argmax(proba)]
+        max_prob = max(proba)
+        predicted_class = self.classes[proba.argmax()]
 
-        # Si la confianza es baja, se devuelve "unknown"
-        if max_prob < 0.70:
-            return "unknown"
-        else:
-            return pred_class
+        if max_prob < 0.8:
+            return "unknown", max_prob  # gesto poco confiable
+        return predicted_class, max_prob
+
